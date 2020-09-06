@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Simple Weather Web App">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#45b9ca">
+
+
+</head>
+<body>
+    <div class="app-wrap">
+    <header>
+        <label>
+            <h3 id="label">Search for a city</h3>
+            <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city ..."/>
+        </label>    
+    </header>
+    <main>
+        <section class="location">
+            <div class="city">Accra, GH</div>
+            <div class="date">Wednesday, 2 September 2020</div>
+        </section>
+        <div class="current">
+            <div class="temp">26<span>°c</span></div>
+            <div class="weather">Sunny</div>
+            <div class="range">20°c / 27°c</div>
+        </div>
+    </main>    
+    </div>
+    <script src="main.js"></script>
+    
+    <script>
+        if('serviceWorker' in navigator) {
+          navigator.serviceWorker
+                   .register('sw.js', {scope:'/'})
+                   .then(function() { console.log("Service Worker Registered"); });
+        }
+        </script>
+        
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.19.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.19.1/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+</body>    
+</html>
